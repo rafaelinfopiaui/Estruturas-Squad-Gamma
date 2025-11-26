@@ -201,19 +201,24 @@ node 04-Queue/orderProcessingSimulation.js
 
 ## 5️⃣ Comparação de Estruturas – Array vs Lista Encadeada
 
-O catálogo de produtos do e‑commerce é estático e muito consultado.
+O catálogo de categorias do e-commerce é **fixo**, muda pouco e é consultado com muita frequência.  
+Nesta task, o objetivo é justificar por que **um Array (Vetor)** é preferível a uma **Lista Ligada (LinkedList)** para armazenar esse catálogo fixo.
 
-### 🔄 Status
-- Será implementado em:
-  - `ArrayComparison/comparison.js`
+### 🎯 Ideia principal
 
-### **Entrega**
-Arquivo explicando por que usar **Array (Vetor)** em vez de **LinkedList**.
+- Em um **Array**, o acesso por índice é direto:
+  ```js
+  const categoria = categorias[5];
+  ```
 
-### **Pontos-chave**
-- Acesso direto por índice → `O(1)`  
-- Lista Encadeada exige percurso sequencial → `O(n)`  
-- Catálogo sofre poucas alterações → inserções não são prioridade  
+Esse acesso tem complexidade O(1) (tempo constante).
+
+Em uma Lista Ligada, para acessar a posição 5, é necessário percorrer nó a nó até chegar lá:
+
+const categoria = linkedList.get(5);
+Esse acesso tem complexidade O(n) (tempo cresce com o tamanho da lista).
+
+Como o catálogo é estático (quase não sofre alterações) e muito lido, priorizamos performance de leitura, o que torna o Array a estrutura ideal.
 
 ---
 
@@ -237,6 +242,13 @@ Estruturas-Squad-Gamma/
 ├── 03-Stack/
 │ ├── Stack.js
 │ └── undoSimulation.js
+│
+├── 04-Queue/
+│ ├── Queue.js
+│ └── orderProcessingSimulation.js
+│
+├── 05-ArrayComparison/
+│ └── comparison.js
 │
 ├── test/
 │ └── main.test.js

@@ -163,24 +163,39 @@ node 03-Stack/undoSimulation.js
 
 ## 4️⃣ Processamento de Pedidos – Fila (Queue)
 
-Durante picos como Black Friday, pedidos entram em uma fila de processamento.
+Nesta task, implementamos uma **Fila (Queue)** para simular o fluxo de processamento de pedidos em um e-commerce.  
+A estrutura segue o comportamento **FIFO (First In, First Out)**: o primeiro pedido que entra é o primeiro a ser processado.
 
-### 🔄 Status
-- Estrutura planejada. Será implementada em:
-  - `Queue/Queue.js`
-  - `Queue/orderProcessingSimulation.js`
+### 🧱 Estruturas criadas
 
-### 🧠 Implementação (planejado)
-A classe `Queue` segue o padrão FIFO (First In, First Out):
+#### **✔ Queue.js**
 
-- `enqueue(pedido)` → adiciona pedido ao final  
-- `dequeue()` → remove o primeiro pedido  
-- `front()` → consulta o primeiro sem remover  
-- `size()` → retorna tamanho da fila  
+Implementa uma fila baseada em array, com os seguintes métodos:
 
-### 📏 Regras esperadas
-- Se `size() > 5` → mostrar `"Alta demanda"`  
-- Processar **2 pedidos** (remover dois itens da fila)
+| Método        | Descrição                                                        |
+|---------------|------------------------------------------------------------------|
+| `enqueue(x)`  | Adiciona um elemento no final da fila                            |
+| `dequeue()`   | Remove e retorna o primeiro elemento (ou `null` se vazia)        |
+| `front()`     | Retorna o primeiro elemento **sem remover** (ou `null` se vazia)|
+| `isEmpty()`   | Retorna `true` se a fila estiver vazia                           |
+| `size()`      | Retorna a quantidade de elementos na fila                        |
+| `print()`     | Exibe o conteúdo atual da fila para debug                        |
+
+---
+
+### ▶️ Simulação de processamento de pedidos
+
+Arquivo: `04-Queue/orderProcessingSimulation.js`  
+
+A simulação representa um cenário em que pedidos são adicionados à fila e processados em ordem de chegada.
+
+#### ✅ Como executar a simulação
+
+Na raiz do projeto:
+
+```bash
+node 04-Queue/orderProcessingSimulation.js
+```
 
 ---
 

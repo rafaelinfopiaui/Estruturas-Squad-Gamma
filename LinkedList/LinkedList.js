@@ -1,5 +1,7 @@
 const Node = require("./Node");
 
+console.log(">>> CARREGANDO LinkedList DE:", __filename);
+
 // Lista ligada usada como Carrinho de Compras
 class LinkedList {
   constructor() {
@@ -68,6 +70,19 @@ class LinkedList {
     );
     previous.next = current.next;
     this.size--;
+  }
+
+  // Retorna um array com os dados dos nós (para facilitar testes)
+  toArray() {
+    const items = [];
+    let current = this.head;
+
+    while (current) {
+      items.push(current.data); // { id, name, price }
+      current = current.next;
+    }
+
+    return items;
   }
 
   // Exibe o estado atual do carrinho

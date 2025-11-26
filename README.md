@@ -158,7 +158,7 @@ Na raiz do projeto:
 
 ```bash
 node 03-Stack/undoSimulation.js
-
+```
 ---
 
 ## 4️⃣ Processamento de Pedidos – Fila (Queue)

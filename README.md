@@ -197,12 +197,6 @@ Estruturas-Squad-Gamma/
 | 4️⃣ Processamento (Queue) | Fila | ✅ Concluído |
 | 5️⃣ Comparação Estruturas | Array vs Lista | ✅ Concluído |
 
-Task	Estrutura	Status
-1️⃣ LinkedList (Carrinho)	Lista Encadeada	✅ Concluído
-2️⃣ CircularList (Vitrine)	Lista Circular	✅ Concluído
-3️⃣ Stack (Undo)	Pilha	✅ Concluído
-4️⃣ Queue (Pedidos)	Fila	✅ Concluído
-5️⃣ Array vs LinkedList	Comparação	✅ Concluído
 
 ## 🚀 Conclusão Geral
 O projeto simula com fidelidade partes essenciais de um e-commerce, aplicando estruturas de dados fundamentais em situações reais, com:

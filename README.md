@@ -125,21 +125,39 @@ node CircularList/promotionsSimulation.js
 
 ## 3️⃣ Botão "Desfazer" – Pilha (Stack)
 
-Simula o comportamento de “Ctrl+Z” em ações do usuário.
+Nesta task, implementamos uma **Pilha (Stack)** para simular o comportamento de um botão **"Desfazer" (Ctrl+Z)** em um editor de texto.  
+Cada ação realizada é empilhada, e o usuário pode voltar estados anteriores usando a estrutura de pilha (LIFO).
 
-### 🔄 Status
-- Estrutura planejada. Será implementada em:
-  - `Stack/Stack.js`
-  - `Stack/undoSimulation.js`
+### 🧱 Estruturas criadas
 
-### 🧠 Implementação (planejado)
-A classe `Stack` seguirá o padrão LIFO (Last In, First Out):
+#### **✔ Stack.js**
 
-- `push(estado)` → adiciona novo estado ao topo  
-- `pop()` → remove o estado mais recente  
-- `undo()` → retorna ao estado anterior  
-- `peek()` → visualiza o topo sem remover  
-- `isEmpty()` → verifica se a pilha está vazia
+Implementa uma pilha genérica baseada em array, com os seguintes métodos:
+
+| Método      | Descrição                                                    |
+|-------------|--------------------------------------------------------------|
+| `push(item)`| Empilha um novo elemento no topo                             |
+| `pop()`     | Remove e retorna o elemento do topo (ou `null` se vazia)     |
+| `peek()`    | Retorna o topo **sem remover** (ou `null` se vazia)         |
+| `isEmpty()` | Retorna `true` se a pilha estiver vazia                      |
+| `size()`    | Retorna a quantidade de elementos na pilha                   |
+| `print()`   | Exibe o conteúdo da pilha (da base até o topo) para debug    |
+
+---
+
+### ▶️ Simulação do botão "Desfazer"
+
+Arquivo: `03-Stack/undoSimulation.js`  
+
+A simulação representa um **editor de texto**, onde cada alteração no texto é empilhada.  
+Quando o usuário aciona o “Desfazer”, o sistema volta ao estado anterior.
+
+#### ✅ Como executar a simulação
+
+Na raiz do projeto:
+
+```bash
+node 03-Stack/undoSimulation.js
 
 ---
 
@@ -201,10 +219,15 @@ Estruturas-Squad-Gamma/
 │ ├── CircularList.js
 │ └── promotionsSimulation.js
 │
+├── 03-Stack/
+│ ├── Stack.js
+│ └── undoSimulation.js
+│
 ├── test/
 │ └── main.test.js
 │ └── circularList.test.js
-││
+│ └── stack.test.js
+│
 ├── boilerplate.js
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md

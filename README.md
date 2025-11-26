@@ -183,25 +183,10 @@ Estruturas-Squad-Gamma/
 │ ├── LinkedList.js
 │ └── cartSimulation.js
 │
-├── CircularList/
-│ ├── CircularNode.js
-│ ├── CircularList.js
-│ └── promotionsSimulation.js
-│
-├── Stack/
-│ ├── Stack.js
-│ └── undoSimulation.js
-│
-├── Queue/
-│ ├── Queue.js
-│ └── orderProcessingSimulation.js
-│
-├── ArrayComparison/
-│ └── comparison.js
-│
-├── test/
-│ └── main.test.js
-│
+├── boilerplate.js
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── PULL_REQUEST_TEMPLATE.md
 └── README.md
 
 ```

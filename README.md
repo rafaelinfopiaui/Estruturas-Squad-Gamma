@@ -191,11 +191,20 @@ Arquivo explicando por que usar **Array (Vetor)** em vez de **LinkedList**.
 ```
 Estruturas-Squad-Gamma/
 │
-├── LinkedList/
+├── 01-LinkedList/
 │ ├── Node.js
 │ ├── LinkedList.js
 │ └── cartSimulation.js
 │
+├── 02-LinkedList/
+│ ├── CircularNode.js
+│ ├── CircularList.js
+│ └── promotionsSimulation.js
+│
+├── test/
+│ └── main.test.js
+│ └── circularList.test.js
+││
 ├── boilerplate.js
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md

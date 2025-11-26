@@ -1,5 +1,5 @@
 const assert = require("assert");
-const LinkedList = require("../LinkedList/LinkedList");
+const LinkedList = require("../01-LinkedList/LinkedList");
 
 console.log(">>> INICIANDO ARQUIVO DE TESTES");
 

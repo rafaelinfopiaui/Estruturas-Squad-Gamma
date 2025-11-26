@@ -1,5 +1,5 @@
 const assert = require("assert");
-const CircularList = require("../CircularList/CircularList");
+const CircularList = require("../02-CircularList/CircularList");
 
 let passed = 0;
 let failed = 0;

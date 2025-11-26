@@ -335,10 +335,10 @@ O QA é responsável por garantir que:
 | Desafio | Estrutura | Status |
 |--------|-----------|--------|
 | 1️⃣ Carrinho (LinkedList) | Lista Encadeada | ✅ Concluído |
-| 2️⃣ Vitrine (CircularList) | Lista Circular | ⏳ Planejado |
-| 3️⃣ Desfazer (Stack) | Pilha | ⏳ A iniciar |
-| 4️⃣ Processamento (Queue) | Fila | ⏳ A iniciar |
-| 5️⃣ Comparação Estruturas | Array vs Lista | ⏳ A iniciar |
+| 2️⃣ Vitrine (CircularList) | Lista Circular | ✅ Concluído |
+| 3️⃣ Desfazer (Stack) | Pilha | ⏳ Em Progresso |
+| 4️⃣ Processamento (Queue) | Fila | ⏳ Em Progresso |
+| 5️⃣ Comparação Estruturas | Array vs Lista | ⏳ Em Progresso |
 
 # 🚀 Conclusão
 

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./assets/squad-gamma-logotipo.png" width="500px" alt="Logo Squad Gamma">
+</p>
+
 # 🛒 Squad Gamma – E-commerce (Varejo Online)
 
 Este repositório contém as implementações das estruturas de dados solicitadas para o **Desafio de Squads – 25/11/2025**, conforme o memorando oficial da Diretoria Técnica.  

@@ -34,14 +34,21 @@ A Squad Gamma deve resolver 5 desafios específicos do setor **E-commerce (Varej
 
 O usuário pode adicionar itens ao carrinho e remover itens de qualquer posição, caso estejam indisponíveis.
 
-### **Implementação**
-- Classe `Node`
-- Classe `LinkedList`:
-  - `append(item)`
-  - `remove(itemId)` → busca e ajusta ponteiros
+### 📂 Arquivos Implementados
+- `Node.js` — nó contendo `id`, `name`, `price` e ponteiro `next`
+- `LinkedList.js` — implementação completa da estrutura de dados
+  - `append(id, name, price)` → adiciona item ao carrinho
+  - `remove(id)` → remove itens do início, meio ou fim
+  - `print()` → exibe todos os itens do carrinho
+- `cartSimulation.js` — simulação prática do carrinho em uso
 
-### **Objetivo**
-Simular um carrinho de compras dinâmico com remoção eficiente de nós.
+### 🎯 Resultado
+A estrutura permite:
+- Inserir itens dinamicamente
+- Remover qualquer item por ID
+- Evitar quebra ao tentar remover itens inexistentes
+- Simular comportamento real de um carrinho de e‑commerce
+
 
 ---
 
@@ -144,61 +151,90 @@ Estruturas-Squad-Gamma/
 # 🔧 Como Executar o Projeto
 
 ### **1. Instalar dependências**
-
+```bash
 npm install
+```
+## ▶️ Executar Testes
 
-### **2. Executar testes**
-
+```bash
 node test/main.test.js
+```
 
-### **3. Executar simulações**
+## 🧪 Executar Simulações
+🛒 Carrinho (LinkedList)
 
+```bash
 node LinkedList/cartSimulation.js
+```
+
+## 🔁 Vitrine (CircularList)
+
+```bash
 node CircularList/promotionsSimulation.js
+```
+
+## ↩️ Desfazer (Stack)
+
+```bash
 node Stack/undoSimulation.js
+```
+
+## 📦 Fila de Pedidos (Queue)
+
+```bash
 node Queue/orderProcessingSimulation.js
+```
+
+## 📊 Comparação Array vs Lista
+
+```bash
 node ArrayComparison/comparison.js
+```
 
-### **🌐 Fluxo de Trabalho (GitHub)**
-✔️ Branches por funcionalidade
+### 🌐 Fluxo de Trabalho (Git)
 
-feature/linkedlist, feature/stack, feature/queue, etc.
+## 🔀 Branches por Funcionalidade
+- `feature/linkedlist`
+- `feature/circularlist`
+- `feature/stack`
+- `feature/queue`
+- `feature/arraycomparison`
 
-✔️ Pull Requests revisados pelo Tech Lead
+## 📝 Padrão de Commits
+- `feat:` — nova funcionalidade  
+- `fix:` — correção  
+- `test:` — criação ou melhoria de testes  
+- `docs:` — alterações no README  
 
-Código deve seguir padrão definido
+## 🔍 Revisão (Code Review)
+- Todo PR é revisado pelo **Tech Lead**
+- **QA** valida simulações e casos de teste antes do merge
 
-Revisão obrigatória antes do merge
+## 🧪 Validação e Testes (QA)
 
-✔️ Commits padronizados
+O arquivo `test/main.test.js` deve conter testes para:
 
-feat: implementa remoção na LinkedList
-
-fix: corrige bug no método next()
-
-test: adiciona casos de alta demanda
-
-🧪 Validação e Testes (QA)
-
-O arquivo main.test.js deve conter testes para:
-
-Remoção de item inexistente
-
-Remoção de item em lista vazia
-
-Comportamento da pilha vazia ao desfazer
-
-Fila com mais de 5 pedidos
-
-Comportamento circular da vitrine
+- Remoção de item inexistente
+- Remoção de item em lista vazia
+- Comportamento da pilha vazia ao desfazer
+- Fila com mais de 5 pedidos
+- Comportamento circular da vitrine
 
 O QA é responsável por garantir que:
 
-Todos os requisitos foram atendidos
+- Todos os requisitos foram atendidos
+- O sistema não quebra com entradas inválidas
+- Edge cases foram contemplados
 
-O sistema não quebra com entradas inválidas
+# 📊 Estado Atual dos Desafios
 
-Edge cases foram contemplados
+| Desafio | Estrutura | Status |
+|--------|-----------|--------|
+| 1️⃣ Carrinho (LinkedList) | Lista Encadeada | ✅ Concluído |
+| 2️⃣ Vitrine (CircularList) | Lista Circular | ⏳ Em andamento |
+| 3️⃣ Desfazer (Stack) | Pilha | ⏳ A iniciar |
+| 4️⃣ Processamento (Queue) | Fila | ⏳ A iniciar |
+| 5️⃣ Comparação Estruturas | Array vs Lista | ⏳ A iniciar |
 
 🚀 Conclusão
 

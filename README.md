@@ -1,401 +1,216 @@
-<p align="center">
-  <img src="./assets/squad-gamma-logotipo.png" width="500px" alt="Logo Squad Gamma">
-</p>
-
 # 🛒 Squad Gamma – E-commerce (Varejo Online)
-
-Este repositório contém as implementações das estruturas de dados solicitadas para o **Desafio de Squads – 25/11/2025**, conforme o memorando oficial da Diretoria Técnica.  
-A Squad Gamma é responsável por desenvolver soluções típicas de uma plataforma de e-commerce, implementando **listas, pilhas, filas e arrays** usando **JavaScript (Node.js)**.
-
----
+<p align="center"> <img src="./assets/squad-gamma-logotipo.png" width="500px" alt="Logo Squad Gamma"> </p>
+Este repositório contém as implementações das estruturas de dados solicitadas no Desafio de Squads – 25/11/2025, conforme o memorando oficial da Diretoria Técnica.
+A Squad Gamma é responsável por desenvolver soluções relacionadas ao fluxo de um e-commerce, utilizando estruturas de dados fundamentais (Listas, Pilhas, Filas e Arrays) implementadas em JavaScript (Node.js).
 
 ## 👥 Composição da Squad e Papéis
+### 🧭 Tech Lead
+- RAFAEL SAMPAIO OLIVEIRA
 
-### 🧭 Tech Lead  
-**RAFAEL SAMPAIO OLIVEIRA**  
-Responsável pela arquitetura geral, organização do repositório, revisão e aprovação dos Pull Requests, garantia de boas práticas e padronização do código.
+Responsável pela arquitetura geral, organização do repositório, revisão de Pull Requests e garantia das boas práticas do projeto.
 
-### 🧪 QA Engineer / Tester  
-**AILTON MEDEIROS RODRIGUES**  
-Responsável pela criação dos casos de teste, validações, tentativas de quebra ("break tests"), verificação dos requisitos e garantia da estabilidade do sistema.
+### 🧪 QA Engineer / Tester
+- AILTON MEDEIROS RODRIGUES
 
-### 🛠️ Software Engineers (Developers)  
-- **ANTÔNIO WILKER SANTOS DA SILVA FILHO**  
-- **ISAAC BRUNO BATISTA ARAGÃO**  
-- **LAIS LIBÓRIO NEIVA EULÁLIO**  
+Responsável por planejamento de testes, validação dos requisitos, testes de estresse e garantia da estabilidade das entregas.
 
-Responsáveis pela implementação prática das classes, métodos, estruturas de dados e simulações das situações-problema.
+### 🛠️ Software Engineers (Developers)
+- ANTÔNIO WILKER SANTOS DA SILVA FILHO
+- ISAAC BRUNO BATISTA ARAGÃO
+- LAIS LIBÓRIO NEIVA EULÁLIO
 
----
+Responsáveis pela implementação das estruturas, simulações e resolução das situações-problema.
 
-# 📦 Estruturas Desenvolvidas e Situações-Problema
-
-A Squad Gamma deve resolver 5 desafios específicos do setor **E-commerce (Varejo Online)**, conforme descrito no documento oficial.
-
----
+### 📦 Estruturas Desenvolvidas e Situações-Problema
+A Squad Gamma implementou 5 tasks, cada uma representando um módulo comum no ecossistema de um e‑commerce.
 
 ## 1️⃣ Carrinho de Compras – Lista Encadeada (LinkedList)
+Simula operações de um carrinho, onde o usuário pode adicionar itens e remover produtos de qualquer posição.
+A estrutura deve funcionar mesmo quando itens estão indisponíveis.
 
-O usuário pode adicionar itens ao carrinho e remover itens de qualquer posição, caso estejam indisponíveis.
+### 📂 Arquivos
+- `01-LinkedList/Node.js` — Nó contendo `{ id, name, price }`
+- `01-LinkedList/LinkedList.js` — Implementação completa da lista encadeada
+- `01-LinkedList/cartSimulation.js` — Simulação do carrinho
 
-### 📂 Arquivos Implementados
+### ✨ Funcionalidades
+- Inserção dinâmica de itens
+- Remoção por ID (início, meio ou fim)
+- Tratamento de remoção inexistente
+- Impressão do estado atual do carrinho
 
-#### 🔹 Boilerplate do Professor
-- `boilerplate.js`  
-  - Contém a estrutura base fornecida pela disciplina (`Node`, `LinkedList`, `Stack`, `Queue`).
-  - A **LinkedList** foi adaptada para representar o **carrinho de compras**, trabalhando com objetos do tipo:
-    ```js
-    { id, name, price }
-    ```
-  - Na área de testes do arquivo, são realizadas operações de:
-    - inserção de produtos,
-    - remoção por `id`,
-    - tentativa de remoção de item inexistente.
+## 2️⃣ Vitrine de Promoções – Lista Circular (CircularList)
+Simula um carrossel de promoções que rotaciona infinitamente — como banners de lojas online.
 
-#### 🔹 Implementação modular (pasta `LinkedList/`)
+### 📂 Arquivos
+- `02-CircularList/CircularNode.js`
+- `02-CircularList/CircularList.js`
+- `02-CircularList/promotionsSimulation.js`
 
-- `LinkedList/Node.js`  
-  Classe que representa o nó da lista:
-  - `data` → objeto produto `{ id, name, price }`  
-  - `next` → referência para o próximo nó
+### ✨ Funcionalidades
+- Estrutura circular sem fim
+- `next()` retorna a próxima promoção automaticamente
+- `printCycle(times)` exibe ciclos para debug
 
-- `LinkedList/LinkedList.js`  
-  Implementação da lista encadeada usada como **carrinho**:
-  - `add(product)` → adiciona produto ao final  
-  - `append(product)` → alias para `add`, mantendo compatibilidade com a documentação  
-  - `remove(productId)` → remove produto pelo `id`, tratando:
-    - remoção do início (head),
-    - remoção do meio/fim,
-    - item inexistente
-  - `print()` → exibe o estado atual do carrinho em formato legível
-
-- `LinkedList/cartSimulation.js`  
-  Script de simulação do carrinho:
-  - Cria uma instância de `LinkedList`
-  - Adiciona produtos (mouse, teclado, headset)
-  - Remove um produto existente
-  - Tenta remover um produto inexistente
-
-
-### 🎯 Resultado
-
-A estrutura permite:
-
-- Inserir itens dinamicamente no carrinho  
-- Remover qualquer item por **ID**  
-- Evitar quebra ao tentar remover itens inexistentes  
-- Simular um fluxo real de carrinho em um e‑commerce
-
----
-
-## 2️⃣ Task 2 — Vitrine de Promoções (Lista Circular)
-
-Nesta task, implementamos uma **Lista Circular** para simular uma vitrine de promoções que gira infinitamente.  
-Cada chamada ao método `next()` retorna a próxima promoção, e ao chegar no final da lista, volta para o início automaticamente.
-
-### 🧱 Estruturas criadas
-
-#### **✔ CircularNode.js**
-Representa um nó individual da lista circular, armazenando:
-- id
-- title
-- discount
-- ponteiro `next`
-
-#### **✔ CircularList.js**
-Contém os métodos principais:
-
-| Método | Função |
-|--------|--------|
-| `add(promo)` | Insere nova promoção no final e liga circularmente |
-| `next()` | Retorna a próxima promoção, seguindo o ciclo infinito |
-| `printCycle(times)` | Exibe uma sequência de promoções para debug |
-
----
-
-### ▶️ Execução da simulação
-
-Para testar a vitrine:
-
+### ▶️ Execução
 ```bash
-node CircularList/promotionsSimulation.js
+node 02-CircularList/promotionsSimulation.js
 ```
-
----
-
 ## 3️⃣ Botão "Desfazer" – Pilha (Stack)
+Simula o comportamento de Ctrl+Z, usando uma pilha (LIFO).
 
-Nesta task, implementamos uma **Pilha (Stack)** para simular o comportamento de um botão **"Desfazer" (Ctrl+Z)** em um editor de texto.  
-Cada ação realizada é empilhada, e o usuário pode voltar estados anteriores usando a estrutura de pilha (LIFO).
+### 📂 Arquivos
+- `03-Stack/Stack.js`
+- `03-Stack/undoSimulation.js`
 
-### 🧱 Estruturas criadas
+### ✨ Funcionalidades
+- Histórico de ações
+- `undo()` volta ao estado anterior
+- Operações: `push`, `pop`, `peek`, `isEmpty`, `size`
 
-#### **✔ Stack.js**
-
-Implementa uma pilha genérica baseada em array, com os seguintes métodos:
-
-| Método      | Descrição                                                    |
-|-------------|--------------------------------------------------------------|
-| `push(item)`| Empilha um novo elemento no topo                             |
-| `pop()`     | Remove e retorna o elemento do topo (ou `null` se vazia)     |
-| `peek()`    | Retorna o topo **sem remover** (ou `null` se vazia)         |
-| `isEmpty()` | Retorna `true` se a pilha estiver vazia                      |
-| `size()`    | Retorna a quantidade de elementos na pilha                   |
-| `print()`   | Exibe o conteúdo da pilha (da base até o topo) para debug    |
-
----
-
-### ▶️ Simulação do botão "Desfazer"
-
-Arquivo: `03-Stack/undoSimulation.js`  
-
-A simulação representa um **editor de texto**, onde cada alteração no texto é empilhada.  
-Quando o usuário aciona o “Desfazer”, o sistema volta ao estado anterior.
-
-#### ✅ Como executar a simulação
-
-Na raiz do projeto:
-
+### ▶️ Execução
 ```bash
 node 03-Stack/undoSimulation.js
 ```
----
-
 ## 4️⃣ Processamento de Pedidos – Fila (Queue)
+Simula pedidos de e‑commerce sendo processados na ordem de chegada (FIFO).
 
-Nesta task, implementamos uma **Fila (Queue)** para simular o fluxo de processamento de pedidos em um e-commerce.  
-A estrutura segue o comportamento **FIFO (First In, First Out)**: o primeiro pedido que entra é o primeiro a ser processado.
+### 📂 Arquivos
+- `04-Queue/Queue.js`
+- `04-Queue/orderProcessingSimulation.js`
 
-### 🧱 Estruturas criadas
+### ✨ Funcionalidades
+- Entrada sequencial de pedidos
+- Processamento ordenado
+- Tratamento de fila vazia
 
-#### **✔ Queue.js**
-
-Implementa uma fila baseada em array, com os seguintes métodos:
-
-| Método        | Descrição                                                        |
-|---------------|------------------------------------------------------------------|
-| `enqueue(x)`  | Adiciona um elemento no final da fila                            |
-| `dequeue()`   | Remove e retorna o primeiro elemento (ou `null` se vazia)        |
-| `front()`     | Retorna o primeiro elemento **sem remover** (ou `null` se vazia)|
-| `isEmpty()`   | Retorna `true` se a fila estiver vazia                           |
-| `size()`      | Retorna a quantidade de elementos na fila                        |
-| `print()`     | Exibe o conteúdo atual da fila para debug                        |
-
----
-
-### ▶️ Simulação de processamento de pedidos
-
-Arquivo: `04-Queue/orderProcessingSimulation.js`  
-
-A simulação representa um cenário em que pedidos são adicionados à fila e processados em ordem de chegada.
-
-#### ✅ Como executar a simulação
-
-Na raiz do projeto:
-
+### ▶️ Execução
 ```bash
 node 04-Queue/orderProcessingSimulation.js
 ```
+## 5️⃣ Comparação de Estruturas – Array vs LinkedList
+O catálogo de categorias do site é estático e muito consultado.
+A tarefa consiste em justificar por que um Array é melhor que uma LinkedList neste cenário.
 
----
+## 🎯 Conclusão
+- Array → Acesso O(1)
+Ideal para dados estáticos com consultas frequentes.
 
-## 5️⃣ Comparação de Estruturas – Array vs Lista Encadeada
+- LinkedList → Acesso O(n)
+Precisa percorrer vários nós até encontrar a posição desejada.
 
-O catálogo de categorias do e-commerce é **fixo**, muda pouco e é consultado com muita frequência.  
-Nesta task, o objetivo é justificar por que **um Array (Vetor)** é preferível a uma **Lista Ligada (LinkedList)** para armazenar esse catálogo fixo.
+### 📂 Arquivo
+05-ArrayComparison/comparison.js
 
-### 🎯 Ideia principal
-
-- Em um **Array**, o acesso por índice é direto:
-  ```js
-  const categoria = categorias[5];
-  ```
-
-Esse acesso tem complexidade O(1) (tempo constante).
-
-Em uma Lista Ligada, para acessar a posição 5, é necessário percorrer nó a nó até chegar lá:
-
-const categoria = linkedList.get(5);
-Esse acesso tem complexidade O(n) (tempo cresce com o tamanho da lista).
-
-Como o catálogo é estático (quase não sofre alterações) e muito lido, priorizamos performance de leitura, o que torna o Array a estrutura ideal.
-
----
-
-# 📁 Estrutura do Repositório
-
-## 📂 Estrutura atual
-
-```
-Estruturas-Squad-Gamma/
-│
-├── 01-LinkedList/
-│ ├── Node.js
-│ ├── LinkedList.js
-│ └── cartSimulation.js
-│
-├── 02-CircularList/
-│ ├── CircularNode.js
-│ ├── CircularList.js
-│ └── promotionsSimulation.js
-│
-├── 03-Stack/
-│ ├── Stack.js
-│ └── undoSimulation.js
-│
-├── 04-Queue/
-│ ├── Queue.js
-│ └── orderProcessingSimulation.js
-│
-├── 05-ArrayComparison/
-│ └── comparison.js
-│
-├── test/
-│ └── main.test.js
-│ └── circularList.test.js
-│ └── stack.test.js
-│
-├── boilerplate.js
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── PULL_REQUEST_TEMPLATE.md
-└── README.md
-
-```
----
-
-## 🧱 Estrutura planejada (próximos desafios)
-
-```
-Estruturas-Squad-Gamma/
-│
-├── 01-LinkedList/
-│ ├── Node.js
-│ ├── LinkedList.js
-│ └── cartSimulation.js
-│
-├── 02-CircularList/
-│ ├── CircularNode.js
-│ ├── CircularList.js
-│ └── promotionsSimulation.js
-│
-├── 03-Stack/
-│ ├── Stack.js
-│ └── undoSimulation.js
-│
-├── 04-Queue/
-│ ├── Queue.js
-│ └── orderProcessingSimulation.js
-│
-├── 05-ArrayComparison/
-│ └── comparison.js
-│
-├── test/
-│ └── main.test.js
-│ └── circularList.test.js
-│
-├── boilerplate.js
-├── CODE_OF_CONDUCT.md
-├── CONTRIBUTING.md
-├── PULL_REQUEST_TEMPLATE.md
-└── README.md
-
-```
-
-# 🔧 Como Executar o Projeto
-
-### **1. Instalar dependências**
+▶️ Execução
 ```bash
-npm install
+node 05-ArrayComparison/comparison.js
 ```
-## ▶️ Executar Testes
-
+### 🧪 Testes Automatizados
+Todos os módulos possuem testes dedicados na pasta:
+```bash
+/test
+│ main.test.js
+│ circularList.test.js
+│ stack.test.js
+│ queue.test.js
+```
+### ▶️ Rodar todos os testes individualmente
 ```bash
 node test/main.test.js
+node test/circularList.test.js
+node test/stack.test.js
+node test/queue.test.js
 ```
-
-## 🧪 Executar Simulações
-🛒 Carrinho (LinkedList)
-
+### ▶️ Rodar TUDO de uma vez
+Com o script:
 ```bash
-node LinkedList/cartSimulation.js
+runAllTests.js
 ```
-
-## 🔁 Vitrine (CircularList)
-
+Execute:
 ```bash
-node CircularList/promotionsSimulation.js
+node runAllTests.js
 ```
-
-## ↩️ Desfazer (Stack)
-
+## 📁 Estrutura Final do Repositório
 ```bash
-node Stack/undoSimulation.js
+Estruturas-Squad-Gamma/
+│
+├── 01-LinkedList/
+│   ├── Node.js
+│   ├── LinkedList.js
+│   └── cartSimulation.js
+│
+├── 02-CircularList/
+│   ├── CircularNode.js
+│   ├── CircularList.js
+│   └── promotionsSimulation.js
+│
+├── 03-Stack/
+│   ├── Stack.js
+│   └── undoSimulation.js
+│
+├── 04-Queue/
+│   ├── Queue.js
+│   └── orderProcessingSimulation.js
+│
+├── 05-ArrayComparison/
+│   └── comparison.js
+│
+├── test/
+│   ├── main.test.js
+│   ├── circularList.test.js
+│   ├── stack.test.js
+│   └── queue.test.js
+│
+├── runAllTests.js
+├── boilerplate.js
+├── CODE_OF_CONDUCT.md
+├── CONTRIBUTING.md
+├── PULL_REQUEST_TEMPLATE.md
+└── README.md
 ```
+## 🌐 Fluxo de Trabalho (Git)
+### 🔀 Branches por Task
+- feature/linkedlist
+- feature/circularlist
+- feature/stack
+- feature/queue
+- feature/arraycomparison
 
-## 📦 Fila de Pedidos (Queue)
+### 📝 Padrão de Commits
+- feat: nova funcionalidade
+- fix: correções
+- test: melhorias nos testes
+- docs: atualizações no README
 
-```bash
-node Queue/orderProcessingSimulation.js
-```
+### 👁‍🗨 Revisão
+- Todo PR é revisado pelo Tech Lead
+- Validação funcional é realizada pelo QA
 
-## 📊 Comparação Array vs Lista
-
-```bash
-node ArrayComparison/comparison.js
-```
-
-### 🌐 Fluxo de Trabalho (Git)
-
-## 🔀 Branches por Funcionalidade
-- `feature/linkedlist`
-- `feature/circularlist`
-- `feature/stack`
-- `feature/queue`
-- `feature/arraycomparison`
-
-## 📝 Padrão de Commits
-- `feat:` — nova funcionalidade  
-- `fix:` — correção  
-- `test:` — criação ou melhoria de testes  
-- `docs:` — alterações no README  
-
-## 🔍 Revisão (Code Review)
-- Todo PR é revisado pelo **Tech Lead**
-- **QA** valida simulações e casos de teste antes do merge
-
-## 🧪 Validação e Testes (QA)
-
-O arquivo `test/main.test.js` deve conter testes para:
-
-- Remoção de item inexistente
-- Remoção de item em lista vazia
-- Comportamento da pilha vazia ao desfazer
-- Fila com mais de 5 pedidos
-- Comportamento circular da vitrine
-
-O QA é responsável por garantir que:
-
-- Todos os requisitos foram atendidos
-- O sistema não quebra com entradas inválidas
-- Edge cases foram contemplados
-
-# 📊 Estado Atual dos Desafios
+## 📊 Status das Tasks
 
 | Desafio | Estrutura | Status |
 |--------|-----------|--------|
 | 1️⃣ Carrinho (LinkedList) | Lista Encadeada | ✅ Concluído |
 | 2️⃣ Vitrine (CircularList) | Lista Circular | ✅ Concluído |
-| 3️⃣ Desfazer (Stack) | Pilha | ⏳ Em Progresso |
-| 4️⃣ Processamento (Queue) | Fila | ⏳ Em Progresso |
-| 5️⃣ Comparação Estruturas | Array vs Lista | ⏳ Em Progresso |
+| 3️⃣ Desfazer (Stack) | Pilha | ✅ Concluído |
+| 4️⃣ Processamento (Queue) | Fila | ✅ Concluído |
+| 5️⃣ Comparação Estruturas | Array vs Lista | ✅ Concluído |
 
-# 🚀 Conclusão
+Task	Estrutura	Status
+1️⃣ LinkedList (Carrinho)	Lista Encadeada	✅ Concluído
+2️⃣ CircularList (Vitrine)	Lista Circular	✅ Concluído
+3️⃣ Stack (Undo)	Pilha	✅ Concluído
+4️⃣ Queue (Pedidos)	Fila	✅ Concluído
+5️⃣ Array vs LinkedList	Comparação	✅ Concluído
 
-Este repositório organiza o desenvolvimento da Squad Gamma para o setor de E‑commerce, simulando desafios reais de plataformas de varejo online.  
-O **Desafio 1 (Carrinho)** já está concluído com:
+## 🚀 Conclusão Geral
+O projeto simula com fidelidade partes essenciais de um e-commerce, aplicando estruturas de dados fundamentais em situações reais, com:
+- modularização clara
+- simulações funcionais
+- testes robustos
+- documentação profissional
+- padrões de engenharia (branching, commits, PRs)
 
-- Implementação via **boilerplate do professor**
-- Implementação modular na pasta `LinkedList/`
+A Squad Gamma cumpriu todos os requisitos e entregou um projeto sólido, escalável e bem documentado.
 
-Os próximos desafios seguirão o mesmo padrão de estrutura, simulação e documentação.

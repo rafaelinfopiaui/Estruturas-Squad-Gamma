@@ -196,7 +196,7 @@ Estruturas-Squad-Gamma/
 │ ├── LinkedList.js
 │ └── cartSimulation.js
 │
-├── 02-LinkedList/
+├── 02-CircularList/
 │ ├── CircularNode.js
 │ ├── CircularList.js
 │ └── promotionsSimulation.js
@@ -219,29 +219,30 @@ Estruturas-Squad-Gamma/
 ```
 Estruturas-Squad-Gamma/
 │
-├── LinkedList/
+├── 01-LinkedList/
 │ ├── Node.js
 │ ├── LinkedList.js
 │ └── cartSimulation.js
 │
-├── CircularList/
+├── 02-CircularList/
 │ ├── CircularNode.js
 │ ├── CircularList.js
 │ └── promotionsSimulation.js
 │
-├── Stack/
+├── 03-Stack/
 │ ├── Stack.js
 │ └── undoSimulation.js
 │
-├── Queue/
+├── 04-Queue/
 │ ├── Queue.js
 │ └── orderProcessingSimulation.js
 │
-├── ArrayComparison/
+├── 05-ArrayComparison/
 │ └── comparison.js
 │
 ├── test/
 │ └── main.test.js
+│ └── circularList.test.js
 │
 ├── boilerplate.js
 ├── CODE_OF_CONDUCT.md

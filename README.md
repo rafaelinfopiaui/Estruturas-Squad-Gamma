@@ -88,30 +88,39 @@ A estrutura permite:
 
 ---
 
-## 2️⃣ Vitrine de Promoções – Lista Circular
+## 2️⃣ Task 2 — Vitrine de Promoções (Lista Circular)
 
-O banner rotativo de promoções deve ciclar infinitamente.
+Nesta task, implementamos uma **Lista Circular** para simular uma vitrine de promoções que gira infinitamente.  
+Cada chamada ao método `next()` retorna a próxima promoção, e ao chegar no final da lista, volta para o início automaticamente.
 
-### 🔄 Status
-- Estrutura planejada, pasta e arquivos serão criados em `CircularList/`:
-  - `CircularNode.js`
-  - `CircularList.js`
-  - `promotionsSimulation.js`
+### 🧱 Estruturas criadas
 
-### 🧠 Ideia de Implementação (planejado)
-- Lista circular simples com 3 nós  
-- Método:
-  - `next()` → retorna o próximo banner em loop
+#### **✔ CircularNode.js**
+Representa um nó individual da lista circular, armazenando:
+- id
+- title
+- discount
+- ponteiro `next`
 
-### ✅ Teste desejado
-Chamadas:
+#### **✔ CircularList.js**
+Contém os métodos principais:
 
-```text
-next() → Promo1
-next() → Promo2
-next() → Promo3
-next() → Promo1
+| Método | Função |
+|--------|--------|
+| `add(promo)` | Insere nova promoção no final e liga circularmente |
+| `next()` | Retorna a próxima promoção, seguindo o ciclo infinito |
+| `printCycle(times)` | Exibe uma sequência de promoções para debug |
+
+---
+
+### ▶️ Execução da simulação
+
+Para testar a vitrine:
+
+```bash
+node CircularList/promotionsSimulation.js
 ```
+
 ---
 
 ## 3️⃣ Botão "Desfazer" – Pilha (Stack)
